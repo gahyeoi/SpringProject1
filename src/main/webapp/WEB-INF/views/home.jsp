@@ -16,6 +16,7 @@
 <h1>Hello World!</h1>
 <p>The time on the server is <%= now %>.</p>
 <p><a href="list">게시판으로 이동</a></p>
+<p><a href="login.jsp">로그인 창으로 이동</a></p>
 </body>
 </html>
 
