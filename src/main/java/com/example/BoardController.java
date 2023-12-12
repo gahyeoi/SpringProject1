@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.List;
+
 @RequestMapping("/")
 @Controller
 public class BoardController {
@@ -29,6 +30,7 @@ public class BoardController {
     public String addPost(){
         return "/addpostform";
     }
+
     @RequestMapping(value="/addok", method=RequestMethod.POST)
     public String addPostOK(BoardVO vo){
         if(boardService.insertBoard(vo)==0){
