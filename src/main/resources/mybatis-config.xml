@@ -5,7 +5,8 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <typeAliases>
-        <typeAlias alias="board" type="com.example.BoardVO" />
-        <typeAlias alias="user" type="com.example.UserVO" />
+        <typeAlias alias="board" type="com.example.board.BoardVO" />
+        <typeAlias alias="user" type="com.example.user.UserVO" />
+        <typeAlias alias="item" type="com.example.ItemVO" />
     </typeAliases>
 </configuration>

@@ -1,7 +1,6 @@
-package com.example;
+package com.example.board;
 
 import java.util.Date;
-import java.util.List;
 
 public class BoardVO {
     private int seq;

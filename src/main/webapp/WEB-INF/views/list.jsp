@@ -53,5 +53,8 @@
     </c:forEach>
 </table>
 </br><a href="add">Add New Post</a>
+<form action="logout" method="post">
+    <button type="submit">logout</button>
+</form>
 </body>
 </html>

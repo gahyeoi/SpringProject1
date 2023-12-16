@@ -1,4 +1,4 @@
-package com.example;
+package com.example.board;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,21 +17,21 @@ public class BoardController {
 
     @RequestMapping("")
     public String home(){
-        return "/home";
+        return "/login";
     }
 
-    @RequestMapping(value="/list", method= RequestMethod.GET)
+    @RequestMapping(value="list", method= RequestMethod.GET)
     public String boardlist(Model model){
         List<BoardVO> check = boardService.getBoardLists();
         model.addAttribute("articles", check);
-        return "/list";
+        return "list";
     }
-    @RequestMapping(value="/add", method=RequestMethod.GET)
+    @RequestMapping(value="add", method=RequestMethod.GET)
     public String addPost(){
-        return "/addpostform";
+        return "addpostform";
     }
 
-    @RequestMapping(value="/addok", method=RequestMethod.POST)
+    @RequestMapping(value="addok", method=RequestMethod.POST)
     public String addPostOK(BoardVO vo){
         if(boardService.insertBoard(vo)==0){
             System.out.println("데이터 추가 실패!");

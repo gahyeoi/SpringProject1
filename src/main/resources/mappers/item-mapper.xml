@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Item">
+    <insert id="insertItem">
+        insert into item (name, photo, price, color,size,remaining)
+        values
+            (#{name}, #{photo}, #{price}, #{color}, #{size}, #{remaining})
+    </insert>
+    <update id="updateItem">
+        update item
+        set name = #{name}, photo = #{photo}, price = #{price}, color = #{color}, size =  #{size}, remaining = #{remaining}
+        where sitem = #{sitem}
+    </update>
+    <delete id="deleteItem">
+        delete from item where sitem=#{sitem}
+    </delete>
+    <select id="getItem" resultType="item">
+        select * from item where sitem=#{sitem}
+    </select>
+    <select id="getItemList" resultType="item">
+        select * from item order by sitem desc
+    </select>
+</mapper>
